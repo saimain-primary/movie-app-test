@@ -6,7 +6,9 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            translate: ["group-hover"],
+        },
     },
-    plugins: [],
+    plugins: [require("daisyui")],
 };

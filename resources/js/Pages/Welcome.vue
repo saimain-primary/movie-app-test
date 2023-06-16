@@ -1,11 +1,17 @@
 <template>
-    <div class="flex justify-center items-center h-screen">
-        <h1 class="text-3xl text-purple-600 font-bold">
-            How to Install Tailwind CSS 3 in Laravel 9 With Vite 3 - TechvBlogs
-        </h1>
+    <div class="p-4">
+        <!-- navbar -->
+        <Navbar />
+        <!-- content -->
+        <MovieCardGrid title="🎬 All Movies"/>
+        <MovieCardGrid title="⭐️ Top Rated" />
+        <MovieCardGrid title="😊 Recommended" />
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import MovieCardGrid from "../components/MovieCardGrid.vue";
+import Navbar from "../components/Navbar.vue";
+</script>
 
 <style lang="scss" scoped></style>
