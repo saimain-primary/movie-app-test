@@ -1,4 +1,13 @@
+import "../css/app.css";
 import { createApp } from "vue";
-import WelcomePage from "./Pages/Welcome.vue";
+import router from "./router";
+import App from "./components/App.vue";
 
-createApp(WelcomePage).mount('#app')
+const app = createApp({
+    components: {
+        App,
+    },
+});
+
+app.use(router);
+app.mount("#app");
