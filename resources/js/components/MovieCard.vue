@@ -1,10 +1,11 @@
 <template>
     <div
+        @click.prevent="goToDetail()"
         class="group relative bg-base-100 shadow-xl cursor-pointer rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-200"
     >
         <img
             class="w-full h-auto"
-            src="https://pics.filmaffinity.com/StartUp_TV_Series-818357544-large.jpg"
+            src="https://m.media-amazon.com/images/M/MV5BMTAxNTIwNzE5MTJeQTJeQWpwZ15BbWU4MDE2NDQ2MTMy._V1_FMjpg_UX1000_.jpg"
             alt=""
         />
         <div
@@ -33,6 +34,10 @@
 
 <script setup>
 import { StarIcon } from "@heroicons/vue/24/solid";
+import router from "../router";
+const goToDetail = () => {
+    router.push("/movies/1");
+};
 </script>
 
 <style lang="scss" scoped></style>

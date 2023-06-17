@@ -1,12 +1,10 @@
 <template>
-    <div class="p-4">
-        <!-- navbar -->
-        <Navbar />
-        <!-- content -->
-        <MovieCardGrid title="🎬 All Movies"/>
-        <MovieCardGrid title="⭐️ Top Rated" />
-        <MovieCardGrid title="😊 Recommended" />
-    </div>
+    <!-- navbar -->
+    <Navbar />
+    <!-- content -->
+    <MovieCardGrid title="🎬 All Movies" />
+    <MovieCardGrid title="⭐️ Top Rated" />
+    <MovieCardGrid title="😊 Recommended" />
 </template>
 
 <script setup>
