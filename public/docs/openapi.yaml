@@ -1,0 +1,237 @@
+openapi: 3.0.3
+info:
+  title: 'Muuvee DB API Documentation'
+  description: 'This is documentation for Muuvie DB API.'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Request was successful.'
+                  message: 'Successfully logged in'
+                  result:
+                    user:
+                      id: 1
+                      name: 'Admin User'
+                      email: admin@gmail.com
+                      email_verified_at: '2023-06-18T14:22:34.000000Z'
+                      created_at: '2023-06-18T14:22:34.000000Z'
+                      updated_at: '2023-06-18T14:22:34.000000Z'
+                    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2FkZjcyZDU1MmNjZTcwMzk3N2NjM2Y5YzZlNmFhODk2NzY4NDY0ZDczYWE5ZTBkOGUyM2MzNjdjNDI3MjE5ZjYwYzRmNzQ4NzBhMTdkNjEiLCJpYXQiOjE2ODcwOTk2MzcuMDYzNTM3LCJuYmYiOjE2ODcwOTk2MzcuMDYzNTM4LCJleHAiOjE3MTg3MjIwMzcuMDU4ODMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BModeTvViAKZhCkiGZZr7j7cfSDvGzNh38ewdNdUXZdNF2pOLVTJs-DOA81BfAcRf5awirFlgJ9YK5uuFuWcDOg9YbFLTIKZop_Y56tTt0vdv4Li6ZFqPqZA8aWrZg6qtKlAcONNMm-StZScT6-ks897i86GGjbvHQU8PsBb5oqPLYW8G-259Go81Mv3dYWdH0joB9Kf5GRTpzw4JmzRokNEZjF2vRebSjGePQc1VYNHv_ODELQtpo_TDD4MX4Xnp9jhqcsQp8y3zdJ749PuXwRvAHSMTWrhLk-2MSnAC-xlbSc3EXdyfSCYGtCWD9FZXHnqRdVVWpIi-FW78YA9AtbWWrPbIWV-ejXVOIIoh-7sX89xGJ21d8NHAWwWr6AVdf51GJTifJBjsR765553UVNPxy-SFJBj5_L6sM4s2VK-HitGn5OBJJq7PVGX5r2DoMnixkj-SLURJXYyBOH2b-xeo08ZLBV_q-_6hWAs85_Fbp8SJoxTHDg82XjOznvlsxORMMjKG15g6e24zwIoykdc5jdKT6IrDd9CY207azi7-BQnZTSdAN-9pO32DVotLPLgHAhWovmCTeTqns1jyckbJhrOpZZV8UlpG41E4tWZOFFBuHWl9OPT2X1RoSku4hW63LDeiZuG-IY5h9ODVB_aBUb8yiZYUCFJtzmUnhc
+                properties:
+                  status:
+                    type: string
+                    example: 'Request was successful.'
+                  message:
+                    type: string
+                    example: 'Successfully logged in'
+                  result:
+                    type: object
+                    properties:
+                      user:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 1
+                          name:
+                            type: string
+                            example: 'Admin User'
+                          email:
+                            type: string
+                            example: admin@gmail.com
+                          email_verified_at:
+                            type: string
+                            example: '2023-06-18T14:22:34.000000Z'
+                          created_at:
+                            type: string
+                            example: '2023-06-18T14:22:34.000000Z'
+                          updated_at:
+                            type: string
+                            example: '2023-06-18T14:22:34.000000Z'
+                      token:
+                        type: string
+                        example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2FkZjcyZDU1MmNjZTcwMzk3N2NjM2Y5YzZlNmFhODk2NzY4NDY0ZDczYWE5ZTBkOGUyM2MzNjdjNDI3MjE5ZjYwYzRmNzQ4NzBhMTdkNjEiLCJpYXQiOjE2ODcwOTk2MzcuMDYzNTM3LCJuYmYiOjE2ODcwOTk2MzcuMDYzNTM4LCJleHAiOjE3MTg3MjIwMzcuMDU4ODMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BModeTvViAKZhCkiGZZr7j7cfSDvGzNh38ewdNdUXZdNF2pOLVTJs-DOA81BfAcRf5awirFlgJ9YK5uuFuWcDOg9YbFLTIKZop_Y56tTt0vdv4Li6ZFqPqZA8aWrZg6qtKlAcONNMm-StZScT6-ks897i86GGjbvHQU8PsBb5oqPLYW8G-259Go81Mv3dYWdH0joB9Kf5GRTpzw4JmzRokNEZjF2vRebSjGePQc1VYNHv_ODELQtpo_TDD4MX4Xnp9jhqcsQp8y3zdJ749PuXwRvAHSMTWrhLk-2MSnAC-xlbSc3EXdyfSCYGtCWD9FZXHnqRdVVWpIi-FW78YA9AtbWWrPbIWV-ejXVOIIoh-7sX89xGJ21d8NHAWwWr6AVdf51GJTifJBjsR765553UVNPxy-SFJBj5_L6sM4s2VK-HitGn5OBJJq7PVGX5r2DoMnixkj-SLURJXYyBOH2b-xeo08ZLBV_q-_6hWAs85_Fbp8SJoxTHDg82XjOznvlsxORMMjKG15g6e24zwIoykdc5jdKT6IrDd9CY207azi7-BQnZTSdAN-9pO32DVotLPLgHAhWovmCTeTqns1jyckbJhrOpZZV8UlpG41E4tWZOFFBuHWl9OPT2X1RoSku4hW63LDeiZuG-IY5h9ODVB_aBUb8yiZYUCFJtzmUnhc
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Error has occurred.'
+                  message: 'Unauthorized login'
+                  result: null
+                properties:
+                  status:
+                    type: string
+                    example: 'Error has occurred.'
+                  message:
+                    type: string
+                    example: 'Unauthorized login'
+                  result:
+                    type: string
+                    example: null
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'The email of the user.'
+                  example: admin@gmail.com
+                password:
+                  type: string
+                  description: 'The password of the user.'
+                  example: password
+              required:
+                - email
+                - password
+      security: []
+  /api/me:
+    get:
+      summary: ''
+      operationId: getApiMe
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {token}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Request was successful.'
+                  message: 'User Details'
+                  result:
+                    id: 1
+                    name: 'Admin User'
+                    email: admin@gmail.com
+                    email_verified_at: '2023-06-18T14:22:34.000000Z'
+                    created_at: '2023-06-18T14:22:34.000000Z'
+                    updated_at: '2023-06-18T14:22:34.000000Z'
+                properties:
+                  status:
+                    type: string
+                    example: 'Request was successful.'
+                  message:
+                    type: string
+                    example: 'User Details'
+                  result:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'Admin User'
+                      email:
+                        type: string
+                        example: admin@gmail.com
+                      email_verified_at:
+                        type: string
+                        example: '2023-06-18T14:22:34.000000Z'
+                      created_at:
+                        type: string
+                        example: '2023-06-18T14:22:34.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-06-18T14:22:34.000000Z'
+        401:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{"message":"Unauthenticated."'
+      tags:
+        - Endpoints
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {token}'
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Request was successful.'
+                  message: 'Successfully logout'
+                  result: null
+                properties:
+                  status:
+                    type: string
+                    example: 'Request was successful.'
+                  message:
+                    type: string
+                    example: 'Successfully logout'
+                  result:
+                    type: string
+                    example: null
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+tags:
+  -
+    name: Endpoints
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []

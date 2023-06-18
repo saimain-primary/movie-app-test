@@ -1,15 +1,12 @@
 <template>
-    <!-- navbar -->
-    <Navbar />
-    <!-- content -->
     <div class="mb-5">
         <router-link
             to="/"
             class="btn btn-sm md:btn btn-neutral md:btn-neutral"
         >
             <ChevronLeftIcon class="w-4 h-4 me-1 inline" />
-            <span class="hidden md:block">Go Back</span></router-link
-        >
+            <span class="hidden md:block">Go Back</span>
+        </router-link>
     </div>
     <div class="flex flex-col md:flex-row justify-start gap-10 mb-5">
         <div>
@@ -83,13 +80,16 @@
             </div>
         </div>
     </div>
-    <MovieCardGrid title="🎬 Related Movies" />
+    <MovieCardGrid title="⭐️ Related Movies" />
+
+    <CommentList />
 </template>
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
-import GenresBadge from "../components/GenresBadge.vue";
 import MovieCardGrid from "../components/MovieCardGrid.vue";
+import GenresBadge from "../components/GenresBadge.vue";
+import CommentList from "../components/CommentList.vue";
 import {
     ChevronLeftIcon,
     StarIcon,

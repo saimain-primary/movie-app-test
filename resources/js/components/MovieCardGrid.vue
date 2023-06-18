@@ -2,7 +2,7 @@
     <div class="mb-10">
         <div class="flex justify-between items-center mb-5">
             <p class="text-sm md:text-lg font-medium tracking-wider">
-                {{ title }}
+               {{ title }}
             </p>
             <button class="btn-sm md:btn md:btn-ghost btn-ghost">
                 View More
@@ -20,7 +20,6 @@
 </template>
 
 <script setup>
-import { StarIcon } from "@heroicons/vue/24/solid";
 import MovieCard from "./MovieCard.vue";
 
 const props = defineProps({

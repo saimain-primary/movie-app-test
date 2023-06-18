@@ -1,0 +1,155 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Muuvee DB API Documentation",
+        "_postman_id": "48553097-c72d-4b8a-a39f-622159d201f1",
+        "description": "This is documentation for Muuvie DB API.",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"admin@gmail.com\",\"password\":\"password\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Request was successful.\",\"message\":\"Successfully logged in\",\"result\":{\"user\":{\"id\":1,\"name\":\"Admin User\",\"email\":\"admin@gmail.com\",\"email_verified_at\":\"2023-06-18T14:22:34.000000Z\",\"created_at\":\"2023-06-18T14:22:34.000000Z\",\"updated_at\":\"2023-06-18T14:22:34.000000Z\"},\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2FkZjcyZDU1MmNjZTcwMzk3N2NjM2Y5YzZlNmFhODk2NzY4NDY0ZDczYWE5ZTBkOGUyM2MzNjdjNDI3MjE5ZjYwYzRmNzQ4NzBhMTdkNjEiLCJpYXQiOjE2ODcwOTk2MzcuMDYzNTM3LCJuYmYiOjE2ODcwOTk2MzcuMDYzNTM4LCJleHAiOjE3MTg3MjIwMzcuMDU4ODMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BModeTvViAKZhCkiGZZr7j7cfSDvGzNh38ewdNdUXZdNF2pOLVTJs-DOA81BfAcRf5awirFlgJ9YK5uuFuWcDOg9YbFLTIKZop_Y56tTt0vdv4Li6ZFqPqZA8aWrZg6qtKlAcONNMm-StZScT6-ks897i86GGjbvHQU8PsBb5oqPLYW8G-259Go81Mv3dYWdH0joB9Kf5GRTpzw4JmzRokNEZjF2vRebSjGePQc1VYNHv_ODELQtpo_TDD4MX4Xnp9jhqcsQp8y3zdJ749PuXwRvAHSMTWrhLk-2MSnAC-xlbSc3EXdyfSCYGtCWD9FZXHnqRdVVWpIi-FW78YA9AtbWWrPbIWV-ejXVOIIoh-7sX89xGJ21d8NHAWwWr6AVdf51GJTifJBjsR765553UVNPxy-SFJBj5_L6sM4s2VK-HitGn5OBJJq7PVGX5r2DoMnixkj-SLURJXYyBOH2b-xeo08ZLBV_q-_6hWAs85_Fbp8SJoxTHDg82XjOznvlsxORMMjKG15g6e24zwIoykdc5jdKT6IrDd9CY207azi7-BQnZTSdAN-9pO32DVotLPLgHAhWovmCTeTqns1jyckbJhrOpZZV8UlpG41E4tWZOFFBuHWl9OPT2X1RoSku4hW63LDeiZuG-IY5h9ODVB_aBUb8yiZYUCFJtzmUnhc\"}}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\"status\":\"Error has occurred.\",\"message\":\"Unauthorized login\",\"result\":null}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/me",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/me",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/me"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Request was successful.\",\"message\":\"User Details\",\"result\":{\"id\":1,\"name\":\"Admin User\",\"email\":\"admin@gmail.com\",\"email_verified_at\":\"2023-06-18T14:22:34.000000Z\",\"created_at\":\"2023-06-18T14:22:34.000000Z\",\"updated_at\":\"2023-06-18T14:22:34.000000Z\"}}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Request was successful.\",\"message\":\"Successfully logout\",\"result\": null}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "key",
+                "value": null,
+                "type": "string"
+            }
+        ]
+    }
+}

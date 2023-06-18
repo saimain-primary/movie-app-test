@@ -1,6 +1,4 @@
 <template>
-    <!-- navbar -->
-    <Navbar />
     <!-- content -->
     <MovieCardGrid title="🎬 All Movies" />
     <MovieCardGrid title="⭐️ Top Rated" />
