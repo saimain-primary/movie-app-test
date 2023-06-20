@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Welcome from "../pages/Welcome.vue";
 import MovieDetail from "../pages/MovieDetail.vue";
 import NewMovie from "../pages/NewMovie.vue";
+import EditMovie from "../pages/EditMovie.vue";
+import MovieList from "../pages/MovieList.vue";
 import { useAuthStore } from "../store/auth";
 const routes = [
     {
@@ -18,6 +20,22 @@ const routes = [
         path: "/movies/new",
         name: "new_movies",
         component: NewMovie,
+        meta: {
+            requireAuth: true,
+        },
+    },
+    {
+        path: "/movies/edit/:id",
+        name: "edit_movie",
+        component: EditMovie,
+        meta: {
+            requireAuth: true,
+        },
+    },
+    {
+        path: "/movies/list",
+        name: "movie_list",
+        component: MovieList,
         meta: {
             requireAuth: true,
         },

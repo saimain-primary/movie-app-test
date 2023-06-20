@@ -1,7 +1,7 @@
 <template>
     <div class="mb-5">
         <router-link
-            to="/"
+            to="/movies/list"
             class="btn btn-sm md:btn btn-neutral md:btn-neutral"
         >
             <ChevronLeftIcon class="w-4 h-4 me-1 inline" />
@@ -27,9 +27,9 @@
             multiple
             placeholder="Genres"
             v-model="formData.genres"
+            :reduce="(i) => i.name"
             taggable
             label="name"
-            :reduce="(i) => i.name"
             class="text-gray-600 style-chooser"
             :options="movieStore.genres"
         ></v-select>
@@ -37,9 +37,9 @@
             v-if="movieStore.authors"
             multiple
             placeholder="Authors"
+            :reduce="(i) => i.name"
             v-model="formData.authors"
             taggable
-            :reduce="(i) => i.name"
             label="name"
             class="text-gray-600 style-chooser"
             :options="movieStore.authors"
@@ -47,8 +47,8 @@
         <v-select
             v-if="movieStore.tags"
             multiple
-            :reduce="(i) => i.name"
             placeholder="Tags"
+            :reduce="(i) => i.name"
             v-model="formData.tags"
             taggable
             label="name"
@@ -85,22 +85,19 @@
                 />
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Add New</button>
+        <button type="submit" class="btn btn-primary">Update Movie</button>
     </form>
 </template>
 
 <script setup>
-import Navbar from "../components/Navbar.vue";
-import MovieCardGrid from "../components/MovieCardGrid.vue";
-import GenresBadge from "../components/GenresBadge.vue";
-import CommentList from "../components/CommentList.vue";
 import { ChevronLeftIcon } from "@heroicons/vue/24/solid";
 import { onMounted, ref } from "vue";
 import { useMovieStore } from "../store/movie";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const movieStore = useMovieStore();
 const router = useRouter();
+const route = useRoute();
 const fileInput = ref(null);
 const previewUrl = ref(null);
 const formData = ref({
@@ -112,6 +109,7 @@ const formData = ref({
     genres: [],
     authors: [],
 });
+
 const coverImage = ref(null);
 
 const handleFileUpload = () => {
@@ -134,7 +132,8 @@ const onSubmitHandler = async () => {
             frmData.append(key, value);
         });
         frmData.append("cover_image", coverImage.value);
-        await movieStore.storeMovieAction(frmData);
+        frmData.append("_method", "PUT");
+        await movieStore.updateMovieAction(route.params.id, frmData);
         router.push("/movies/list");
     } catch (error) {
         console.log(error);
@@ -145,6 +144,17 @@ onMounted(async () => {
     await movieStore.getTagListAction();
     await movieStore.getAuthorListAction();
     await movieStore.getGenresListAction();
+
+    const detail = await movieStore.getMovieDetailAction(route.params.id);
+    formData.value.title = detail.title;
+    formData.value.summary = detail.summary;
+    formData.value.imdb_rating = detail.imdb_rating;
+    formData.value.pdf_download_link = detail.pdf_download_link;
+    formData.value.genres = detail.genres;
+    formData.value.tags = detail.tags;
+    formData.value.authors = detail.authors;
+    previewUrl.value =
+        "http://localhost:8000/storage/images/" + detail.cover_image;
 });
 </script>
 

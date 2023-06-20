@@ -50,10 +50,6 @@ export const useAuthStore = defineStore("auth", {
                 const { data } = await axios.get(
                     "http://localhost:8000/api/me"
                 );
-                console.log(
-                    "🚀 ~ file: auth.js:49 ~ getMeAction ~ data:",
-                    data
-                );
                 this.user = data.result;
             } catch (error) {
                 this.user = null;

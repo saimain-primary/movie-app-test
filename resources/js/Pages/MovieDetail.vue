@@ -12,13 +12,16 @@
         <div>
             <img
                 class="w-96 h-auto rounded-lg shadow-lg mb-5"
-                src="https://m.media-amazon.com/images/M/MV5BMTAxNTIwNzE5MTJeQTJeQWpwZ15BbWU4MDE2NDQ2MTMy._V1_FMjpg_UX1000_.jpg"
+                :src="
+                    'http://localhost:8000/storage/images/' +
+                    movieDetail?.cover_image
+                "
                 alt=""
             />
         </div>
-        <div class="">
+        <div class="" v-if="movieDetail">
             <h3 class="text-lg md:text-3xl font-medium tracking-wider mb-3">
-                Startup (2016)
+                {{ movieDetail?.title }}
             </h3>
             <div class="mb-8">
                 <div class="flex items-center gap-3 mb-3">
@@ -31,58 +34,79 @@
                         />
                         <span
                             class="font-medium text-xs md:text-base tracking-wider"
-                            >7.0 / 10</span
+                            >{{ movieDetail.imdb_rating }} / 10</span
                         >
                     </div>
                 </div>
                 <div class="space-x-2">
-                    <GenresBadge text="Crime" />
-                    <GenresBadge text="Thriller" />
+                    <GenresBadge
+                        v-for="(genre, index) in movieDetail.genres"
+                        :key="index"
+                        :text="genre"
+                    />
                 </div>
             </div>
             <p class="mb-5 text-base tracking-wide">
-                A desperate banker, a Haitian-American gang lord and a
-                Cuban-American hacker are forced to work together to unwittingly
-                create their version of the American dream - organized crime
-                2.0.
+                {{ movieDetail.summary }}
             </p>
             <div class="flex items-center gap-3 mb-3">
                 <p class="font-medium text-sm tracking-wider hidden md:block">
                     Authors :
                 </p>
                 <div class="space-x-1">
-                    <span class="text-accent text-sm cursor-pointer"
-                        >Adam Brody</span
-                    >
-                    <span>,</span>
-                    <span class="text-accent text-sm cursor-pointer"
-                        >AEdi Gathegi</span
-                    >
-                    <span>,</span>
-                    <span class="text-accent text-sm cursor-pointer"
-                        >Otmara Marrero</span
+                    <span
+                        v-for="(author, index) in movieDetail.authors"
+                        :key="index"
+                        class="text-accent text-sm cursor-pointer"
+                        >{{ author }}</span
                     >
                 </div>
             </div>
             <div class="flex items-center gap-3 mb-5">
                 <div class="space-x-2">
-                    <span class="text-sm cursor-pointer">#tech</span>
-                    <span class="text-sm cursor-pointer">#startup</span>
-                    <span class="text-sm cursor-pointer">#teen</span>
-                    <span class="text-sm cursor-pointer">#action</span>
+                    <span
+                        v-for="(tag, index) in movieDetail.tags"
+                        :key="index"
+                        class="text-sm cursor-pointer"
+                        >#{{ tag }}</span
+                    >
                 </div>
             </div>
             <div>
-                <button class="btn btn-sm md:btn btn-primary md:btn-primary">
+                <a
+                    :href="movieDetail.pdf_download_link"
+                    target="_blank"
+                    class="btn btn-sm md:btn btn-primary md:btn-primary"
+                >
                     <ArrowDownTrayIcon class="w-4 h-4" />
                     Download PDF
-                </button>
+                </a>
             </div>
         </div>
     </div>
-    <MovieCardGrid title="⭐️ Related Movies" />
+    <div class="mb-10">
+        <div class="flex justify-between items-center mb-5">
+            <p class="text-sm md:text-lg font-medium tracking-wider">
+                Related Movies
+            </p>
+            <!-- <button class="btn-sm md:btn md:btn-ghost btn-ghost">
+                View More
+            </button> -->
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <template v-for="d in movieDetail?.related_movies" :key="d.id">
+                <MovieCard
+                    :title="d.title"
+                    :summary="d.summary"
+                    :id="d.id"
+                    :rating="d.imdb_rating"
+                    :cover_image="d.cover_image"
+                />
+            </template>
+        </div>
+    </div>
 
-    <CommentList />
+    <CommentList :data="movieDetail?.comments" @refresh-data="fetchDetail" />
 </template>
 
 <script setup>
@@ -90,11 +114,37 @@ import Navbar from "../components/Navbar.vue";
 import MovieCardGrid from "../components/MovieCardGrid.vue";
 import GenresBadge from "../components/GenresBadge.vue";
 import CommentList from "../components/CommentList.vue";
+import MovieCard from "../components/MovieCard.vue";
 import {
     ChevronLeftIcon,
     StarIcon,
     ArrowDownTrayIcon,
 } from "@heroicons/vue/24/solid";
+import { useRoute, useRouter } from "vue-router";
+import { onMounted, onUpdated, ref, watch } from "vue";
+import { useMovieStore } from "../store/movie";
+
+const route = useRoute();
+const movieStore = useMovieStore();
+const movieDetail = ref(null);
+const id = ref(null);
+
+const fetchDetail = async () => {
+    movieDetail.value = await movieStore.getMovieDetailAction(id.value);
+};
+
+onMounted(async () => {
+    id.value = route.params.id;
+    movieDetail.value = await movieStore.getMovieDetailAction(id.value);
+});
+
+watch(
+    () => route.params.id,
+    async (newValue) => {
+        id.value = newValue;
+        movieDetail.value = await movieStore.getMovieDetailAction(newValue);
+    }
+);
 </script>
 
 <style lang="scss" scoped></style>

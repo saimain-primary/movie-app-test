@@ -1,20 +1,21 @@
 <template>
     <div class="navbar bg-base-100 mb-10">
         <div class="navbar-start">
-            <p
+            <router-link
+                to="/"
                 class="font-medium tracking-wider normal-case text-base md:text-xl"
             >
                 🍿 Muuvee DB
-            </p>
+            </router-link>
         </div>
         <div class="navbar-end flex gap-3">
             <div v-if="authStore.user" class="flex items-center gap-5">
                 <p class="font-medium text-base">{{ authStore.user.name }}</p>
                 <router-link
-                    to="/movies/new"
+                    to="/movies/list"
                     class="btn btn-xs btn-primary md:btn md:btn-primary"
                 >
-                    Add New Movie
+                    Manage Movies
                 </router-link>
                 <button
                     type="button"
