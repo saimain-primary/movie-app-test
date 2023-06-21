@@ -11,12 +11,18 @@
     <div class="flex flex-col md:flex-row justify-start gap-10 mb-5">
         <div>
             <img
+                v-if="movieDetail?.cover_image"
                 class="w-96 h-auto rounded-lg shadow-lg mb-5"
                 :src="
                     'http://localhost:8000/storage/images/' +
-                    movieDetail?.cover_image
+                    movieDetail.cover_image
                 "
                 alt=""
+            />
+            <img
+                v-else
+                class="w-96 h-auto rounded-lg shadow-lg mb-5"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
             />
         </div>
         <div class="" v-if="movieDetail">

@@ -4,10 +4,17 @@
         class="group relative bg-base-100 shadow-xl cursor-pointer rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-200 h-72 w-full"
     >
         <img
+            v-if="cover_image"
             class="w-full h-full"
             :src="'http://localhost:8000/storage/images/' + cover_image"
             alt=""
         />
+        <img
+            v-else
+            class="w-full h-full"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+        />
+
         <div
             class="absolute top-3 left-2 badge badge-neutral items-center flex gap-1 py-3"
         >

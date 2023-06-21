@@ -100,7 +100,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ePdEaZ3v4hcDf6gV8ak156b'
+      - 'Bearer 3V6ehkcEaP46dfvDg81Zb5a'
     controller: null
     method: null
     route: null
@@ -146,7 +146,395 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4Ec6favk8gZ16Vh3Pebad5D'
+      - 'Bearer kZ1DcgV5e83dvEhPf646baa'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/tags
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"Request was successful.","message":"Tags List","result":[{"id":1,"slug":"e","name":"E","created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"},{"id":2,"slug":"f","name":"F","created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"},{"id":3,"slug":"object-object","name":"[object Object]","created_at":"2023-06-20T11:24:57.000000Z","updated_at":"2023-06-20T11:24:57.000000Z"},{"id":4,"slug":"dfasfasdfasdf","name":"dfasfasdfasdf","created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":5,"slug":"asdfasdfasdfasdf","name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:30:33.000000Z","updated_at":"2023-06-20T11:30:33.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/authors
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"Request was successful.","message":"Authors List","result":[{"id":1,"name":"D","created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"},{"id":2,"name":"C","created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"},{"id":3,"name":"[object Object]","created_at":"2023-06-20T11:24:57.000000Z","updated_at":"2023-06-20T11:24:57.000000Z"},{"id":4,"name":"asdfasdfasdfasdfa","created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":5,"name":"dafsdfasdfasdf","created_at":"2023-06-20T11:30:33.000000Z","updated_at":"2023-06-20T11:30:33.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/genres
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"Request was successful.","message":"Genres List","result":[{"id":1,"name":"F","created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"},{"id":2,"name":"E","created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"},{"id":3,"name":"[object Object]","created_at":"2023-06-20T11:24:57.000000Z","updated_at":"2023-06-20T11:24:57.000000Z"},{"id":4,"name":"dfasfasdfasdf","created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":5,"name":"[object Object]","created_at":"2023-06-20T11:29:41.000000Z","updated_at":"2023-06-20T11:29:41.000000Z"},{"id":6,"name":"dfasfasdfasdf","created_at":"2023-06-20T11:30:19.000000Z","updated_at":"2023-06-20T11:30:19.000000Z"},{"id":7,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:30:33.000000Z","updated_at":"2023-06-20T11:30:33.000000Z"},{"id":8,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:30:33.000000Z","updated_at":"2023-06-20T11:30:33.000000Z"},{"id":9,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:31:24.000000Z","updated_at":"2023-06-20T11:31:24.000000Z"},{"id":10,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:31:24.000000Z","updated_at":"2023-06-20T11:31:24.000000Z"},{"id":11,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:31:24.000000Z","updated_at":"2023-06-20T11:31:24.000000Z"},{"id":12,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T11:31:24.000000Z","updated_at":"2023-06-20T11:31:24.000000Z"},{"id":13,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:03:04.000000Z","updated_at":"2023-06-20T16:03:04.000000Z"},{"id":14,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:03:04.000000Z","updated_at":"2023-06-20T16:03:04.000000Z"},{"id":15,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:03:04.000000Z","updated_at":"2023-06-20T16:03:04.000000Z"},{"id":16,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:03:04.000000Z","updated_at":"2023-06-20T16:03:04.000000Z"},{"id":17,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:13:29.000000Z","updated_at":"2023-06-20T16:13:29.000000Z"},{"id":18,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:13:29.000000Z","updated_at":"2023-06-20T16:13:29.000000Z"},{"id":19,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:13:29.000000Z","updated_at":"2023-06-20T16:13:29.000000Z"},{"id":20,"name":"asdfasdfasdfasdf","created_at":"2023-06-20T16:13:29.000000Z","updated_at":"2023-06-20T16:13:29.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/movies
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"Request was successful.","message":"Movies List","result":{"data":[{"id":20,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[{"id":1,"name":"Dolorem qui blanditi","email":"jucurus@mailinator.com","text":"Numquam molestiae qu","created_at":"58 minutes ago"},{"id":2,"name":"Dolorem qui blanditi","email":"jucurus@mailinator.com","text":"Numquam molestiae qu","created_at":"58 minutes ago"},{"id":3,"name":"Adipisicing exercita","email":"zepecad@mailinator.com","text":"Earum odit unde quas","created_at":"52 minutes ago"},{"id":4,"name":"Iure sint deleniti q","email":"bowisorin@mailinator.com","text":"Non sint aliquam lor","created_at":"51 minutes ago"},{"id":5,"name":"Elit et quo Nam vol","email":"vexikileje@mailinator.com","text":"Assumenda impedit v","created_at":"49 minutes ago"},{"id":6,"name":"Ducimus beatae qui","email":"xuzimuhole@mailinator.com","text":"Officia beatae iusto","created_at":"49 minutes ago"}],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":21,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[{"id":8,"name":"Asperiores iste volu","email":"vumufa@mailinator.com","text":"Laborum cupidatat do","created_at":"49 minutes ago"},{"id":15,"name":"Qui id unde quibusda","email":"lukyjon@mailinator.com","text":"Deserunt ex ratione","created_at":"13 minutes ago"},{"id":16,"name":"Enim itaque optio p","email":"gofiqevo@mailinator.com","text":"Ipsam omnis commodo","created_at":"13 minutes ago"},{"id":17,"name":"Nisi deleniti volupt","email":"lyzocyxaj@mailinator.com","text":"Illo qui sed sed ull","created_at":"11 minutes ago"}],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":22,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":23,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["a","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[{"id":14,"name":"Culpa quam hic quae","email":"tujoralyjy@mailinator.com","text":"Ullam totam doloribu","created_at":"13 minutes ago"},{"id":18,"name":"Nostrud quia eum id","email":"zony@mailinator.com","text":"A voluptatum nisi pe","created_at":"11 minutes ago"}],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":24,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":25,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":26,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":27,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":28,"title":"Update Movie","summary":"asdfasdfasdfasdf","imdb_rating":"5","cover_image":"1687260518-Kansan Logo (1024 \u00d7 1024 px).png","pdf_download_link":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","genres":["asdfa","dasfas","afsdfad","dsaffasdfa"],"authors":["asdfasdfasdfasdfa","dafsdfasdfasdf"],"tags":["dfasfasdfasdf","asdfasdfasdfasdf"],"comments":[{"id":7,"name":"Sint aliquip quis sa","email":"jugusex@mailinator.com","text":"Vel laudantium dolo","created_at":"49 minutes ago"}],"related_movies":null,"created_at":"2023-06-20T11:28:38.000000Z","updated_at":"2023-06-20T11:28:38.000000Z"},{"id":18,"title":"This is another test","summary":"THis is umasdfasd","imdb_rating":"10","cover_image":"1687260178-MV5BMTAxNTIwNzE5MTJeQTJeQWpwZ15BbWU4MDE2NDQ2MTMy._V1_FMjpg_UX1000_.jpg","pdf_download_link":"dasfdasfadsfasdfasdfasdfasdf","genres":["A","B"],"authors":["D","C"],"tags":["E","F"],"comments":[],"related_movies":null,"created_at":"2023-06-20T11:22:58.000000Z","updated_at":"2023-06-20T11:22:58.000000Z"}],"links":{"first":"http:\/\/localhost:8000\/api\/movies?page=1","last":"http:\/\/localhost:8000\/api\/movies?page=2","prev":null,"next":"http:\/\/localhost:8000\/api\/movies?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/movies?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/movies?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/movies","per_page":10,"to":10,"total":13,"total_page":2}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/movies
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: nihil
+        type: string
+        custom: []
+      imdb_rating:
+        name: imdb_rating
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: nihil
+      imdb_rating: aut
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/movies/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"Request was successful.","message":"Movie Detail","result":{"id":16,"title":"dasdasd","summary":"asdf","imdb_rating":"2","cover_image":"1687260068-1131w-rLty9dwhGG4.webp","pdf_download_link":"asdf","genres":["al"],"authors":["asdf"],"tags":["asdlkf"],"comments":[{"id":19,"name":"Non dolore ullam con","email":"lebahuwib@mailinator.com","text":"Culpa consequatur vo","created_at":"11 minutes ago"}],"related_movies":[{"id":16,"title":"dasdasd","summary":"asdf","imdb_rating":"2","cover_image":"1687260068-1131w-rLty9dwhGG4.webp","pdf_download_link":"asdf","genres":["al"],"authors":["asdf"],"tags":["asdlkf"],"comments":[{"id":19,"name":"Non dolore ullam con","email":"lebahuwib@mailinator.com","text":"Culpa consequatur vo","created_at":"11 minutes ago"}],"related_movies":null,"created_at":"2023-06-19T07:56:44.000000Z","updated_at":"2023-06-19T07:56:44.000000Z"}],"created_at":"2023-06-19T07:56:44.000000Z","updated_at":"2023-06-19T07:56:44.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/movies/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/movies/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/movies/{id}/comments'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie.'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: blanditiis
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: vilma.turcotte@example.net
+        type: string
+        custom: []
+      text:
+        name: text
+        description: ''
+        required: true
+        example: beatae
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: blanditiis
+      email: vilma.turcotte@example.net
+      text: beatae
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
     controller: null
     method: null
     route: null

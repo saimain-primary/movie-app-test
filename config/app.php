@@ -186,6 +186,7 @@ return [
          * Package Service Providers...
          */
         App\Providers\RepositoriesServiceProvider::class,
+        App\Providers\FakerServiceProvider::class,
 
         /*
          * Application Service Providers...
